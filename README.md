@@ -1,9 +1,7 @@
 # Introduction
 
-This is the source code of our TCSVT 2023 paper "DCR-ReID: Deep Component Reconstruction for Cloth-Changing Person Re-Identification". Please cite the following paper if you use our code.
-
-Zhenyu Cui, Jiahuan Zhou, Yuxin Peng, Shiliang Zhang and Yaowei Wang, "DCR-ReID: Deep Component Reconstruction for Cloth-Changing Person Re-Identification", IEEE Transactions on Circuits and Systems for Video Technology (TCSVT), 2023.
-
+This article was submitted for publication in “Intelligent Data Analysis”. The authors are Yiyuan Ge, M.S. and Mingxin Yu, Ph.
+The key to solving the cloth-changing person re-identification (Re-ID) problem lies in separating discriminative information that is independent of clothing, such as pose, silhouette and face. Most current approaches disentangle clothes-unrelated features by modeling clothes-related features. However, due to the lack of ground truth for guidance, this disentanglement process remains uncontrolled. These methods may unintentionally introduce noise into the system, thereby impairing the performance of cloth-changing person re-identification. To mitigate this issue, we propose a novel framework, termed Controllable Disentanglement Re-ID (CD-ReID), which employs reconstruction learning and attention enhancement for controllable separation of clothing-related and unrelated features. Specifically, our framework introduces an Attention-Enhancing Disentanglement Branch (ADB), designed to reconstruct clothing-related features, clothing-unrelated features, and contour features. Furthermore, we propose two novel attention mechanisms: Dynamic Interaction-Faraware Aggregation Attention (DI-FAA) and Dynamic Interaction-Positional Relevance Attention (DI-PRA). These mechanisms aim to augment the expressive capacity of the disentangled features. Experiments on LTCC, PRCC and CCVID demonstrate the superiority of our approach over representative state-of-the-art CC-ReID methods. For the cloth-changing setting, the mAP of the network on PRCC/LTCC dataset is 58.5%/19.5%, and the Rank-1 is 58.6%/41.5%. In addition, the model also obtain 81.5% of mAP and 83.4% of Rank-1 on the video dataset CCVID under cloth-changing setting
 
 
 # Dependencies
@@ -17,25 +15,8 @@ Zhenyu Cui, Jiahuan Zhou, Yuxin Peng, Shiliang Zhang and Yaowei Wang, "DCR-ReID:
 - apex
 
 
-
 # Data Preparation
 
 - Download the pre-processed datasets that we used from the [link](https://pan.baidu.com/s/1LwAyB1R86P3xMZxIPm1vwQ) (password: dg1a) and unzip them to ./datasets folders.
 
-
-# Usage
-
-- Replace `_C.DATA.ROOT` and `_C.OUTPUT` in `configs/default_img.py&default_vid.py`with your own `data path` and `output path`, respectively.
-
-- Start training by executing the following commands.
-
-1. For LTCC dataset: `python -m torch.distributed.launch --nproc_per_node=2 --master_port 12345 main.py --dataset ltcc --cfg configs/res50_cels_cal.yaml --gpu 0,1 --spr 0 --sacr 0.05 --rr 1.0`
-
-2. For PRCC dataset: `python -m torch.distributed.launch --nproc_per_node=2 --master_port 12345 main.py --dataset prcc --cfg configs/res50_cels_cal.yaml --gpu 2,3 --spr 1.0 --sacr 0.05 --rr 1.0`
-
-3. For CCVID dataset: `python -m torch.distributed.launch --nproc_per_node=4 --master_port 12345 main.py --dataset ccvid --cfg configs/c2dres50_ce_cal.yaml --gpu 0,1,2,3`
-
-For any questions, feel free to contact us (cuizhenyu@stu.pku.edu.cn).
-
-Welcome to our [Laboratory Homepage](http://www.icst.pku.edu.cn/mipl/home/) for more information about our papers, source codes, and datasets.
 

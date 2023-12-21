@@ -24,5 +24,5 @@
 
 # Arithmetic Support
 
-- The model is trained on a single RTX 4090 GPU
+- The model is trained on two RTX 4090 GPUs
 

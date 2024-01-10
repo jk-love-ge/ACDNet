@@ -18,9 +18,6 @@
 - apex
 
 
-# Data Preparation
-
-- Download the pre-processed datasets that we used from the [link](https://pan.baidu.com/s/1LwAyB1R86P3xMZxIPm1vwQ) (password: dg1a) and unzip them to ./datasets folders.
 
 # Arithmetic Support
 

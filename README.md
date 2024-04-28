@@ -1,6 +1,6 @@
 # Introduction
 
-- This article was submitted for publication in “Intelligent Data Analysis”. The authors are Yiyuan Ge, M.S. and Mingxin Yu, Ph.
+- waiting
 
 # Abstract
 

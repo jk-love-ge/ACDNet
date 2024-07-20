@@ -4,7 +4,7 @@
 
 # Abstract
 
-- waiting.
+- Download the pre-processed datasets that we used from the link (password: dg1a) and unzip them to ./datasets folders.
 
 
 # Dependencies

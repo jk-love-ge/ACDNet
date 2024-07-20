@@ -1,8 +1,8 @@
 # Introduction
 
-- waiting
+- The code for our ACDNet
 
-# Abstract
+# How to get the data:
 
 - Download the pre-processed datasets that we used from the link (password: dg1a) and unzip them to ./datasets folders.
 

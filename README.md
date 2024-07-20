@@ -4,7 +4,7 @@
 
 # How to get the data:
 
-- Download the pre-processed datasets that we used from the link (password: dg1a) and unzip them to ./datasets folders.
+- Download the pre-processed datasets that we used from the [link](https://pan.baidu.com/s/1LwAyB1R86P3xMZxIPm1vwQ) (password: dg1a) and unzip them to ./datasets folders.
 
 
 # Dependencies

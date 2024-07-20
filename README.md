@@ -18,11 +18,9 @@
 - apex
 
 # How to use：
-- Replace _C.DATA.ROOT and _C.OUTPUT in configs/default_img.py&default_vid.pywith your own data path and output path, respectively.
+- Path: Replace _C.DATA.ROOT and _C.OUTPUT in configs/default_img.py&default_vid.pywith your own data path and output path, respectively.
 
-Start training by executing the following commands.
-
--For dataset_name dataset: python -m torch.distributed.launch --nproc_per_node=2 --master_port 12345 main.py --dataset dataset_name --cfg configs/res50_cels_cal.yaml --gpu 0,1 --spr 0 --sacr 0.05 --rr 1.0
+- Training: For dataset_name dataset: python -m torch.distributed.launch --nproc_per_node=2 --master_port 12345 main.py --dataset dataset_name --cfg configs/res50_cels_cal.yaml --gpu 0,1 --spr 0 --sacr 0.05 --rr 1.0
 
 
 
